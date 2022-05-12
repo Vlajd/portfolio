@@ -1,12 +1,8 @@
 <script>
     import { onMount } from 'svelte';
-
     let Module;
-
-    function loadModule(index, path) {
-        async () => {
-            Module = (await import(path)).default;
-        }
+    onMount( async () => Module = (await import('./English.svelte')).default );
+    function selectLang(index) {
         let elements = document.getElementsByClassName('langSelect');
         for (let i = 0; i < elements.length; i++) {
             if (i == index) {
@@ -17,19 +13,27 @@
             }
         }
     }
-
-    onMount(async () => {
-        Module = (await import('./English.svelte')).default;
-    });
 </script>
 <div id='Lang'>
     <!-- svelte-ignore a11y-missing-attribute -->
-    <button class='langSelect underlined' on:click={() => loadModule(0, './English.svelte')}>English</button>
+    <button class='langSelect underlined' on:click={ () => {
+        selectLang(0);
+        let fn = async () => Module = (await import('./English.svelte')).default;
+        fn();
+    }}>English</button>
     |
     <!-- svelte-ignore a11y-missing-attribute -->
-    <button class='langSelect' on:click={() => loadModule(1, './German.svelte')}>Deutsch</button>
+    <button class='langSelect' on:click={ () => {
+        selectLang(1);
+        let fn = async () => Module = (await import('./German.svelte')).default;
+        fn();
+    }}>Deutsch</button>
     |
     <!-- svelte-ignore a11y-missing-attribute -->
-    <button class='langSelect' on:click={() => loadModule(2, './Bulgarian.svelte')}>Български</button>
+    <button class='langSelect' on:click={ () => {
+        selectLang(2);
+        let fn = async () => Module = (await import('./Bulgarian.svelte')).default;
+        fn();
+    }}>Български</button>
 </div>
 <svelte:component this={Module}></svelte:component>
