@@ -17,6 +17,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-decoration: none;
 }
 
 body {
@@ -47,16 +48,30 @@ h5 {
 }
 
 #Lang {
+    /* Transform */
+    position: absolute;
+    transform: translate(54px, 28px);
+    z-index: 1;
+}
+
+#Lang button {
     /* Font */
     font-family: var(--txt1);
     font-style: normal;
     font-weight: 400;
     font-size: 14pt;
 
-    /* Transform */
-    position: absolute;
-    transform: translate(54px, 28px);
-    z-index: 1;
+    /* Button */
+    background-color: transparent;
+    border-color: transparent;
+    cursor: pointer;
+
+    /* Color */
+    color: var(--clr4);
+}
+
+.underlined {
+    text-decoration: underline;
 }
 
 #Start {
