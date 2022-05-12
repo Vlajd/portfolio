@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Frank+Ruhl+Libre:wght@400;500;700&display=swap');
+
+:root {
+    /* Color Variables */
+    --clr0: #E8E8DB;
+    --clr1: #B6B5A8;
+    --clr2: #858377;
+    --clr3: #636057;
+    --clr4: #494846;
+    
+    /* Font Variables */
+    --txt0: 'Cinzel', 'Times New Roman', serif;
+    --txt1: 'Frank Ruhl Libre', 'Times New Roman', serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--clr0);
+}
+
+h1 {
+    /* Font */
+    font-family: var(--txt0);
+    font-style: normal;
+    font-weight: 400pt;
+    font-size: 54pt;
+    
+    /* Color */
+    color: var(--clr4);
+}
+
+h5 {
+    /* Font */
+    font-family: var(--txt1);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20pt;
+    letter-spacing: 10pt;
+    
+    /* Color */
+    color: var(--clr3);
+}
+
+#Lang {
+    /* Font */
+    font-family: var(--txt1);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14pt;
+
+    /* Transform */
+    position: absolute;
+    transform: translate(54px, 28px);
+    z-index: 1;
+}
+
+#Start {
+    /* Transform */
+    min-width: 100vw;
+    min-height: 100vh;
+}
+
+#Start div {
+    /* Flexbox */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    /* Transform */
+    min-width: 100vw;
+    min-height: 100vh;
+}
