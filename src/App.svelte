@@ -2,6 +2,9 @@
     import { onMount } from 'svelte';
     let Module;
     onMount( async () => Module = (await import('./English.svelte')).default );
+    
+    // ## Language Selector
+    // Visually changes the selected language 
     function selectLang(index) {
         let elements = document.getElementsByClassName('langSelect');
         for (let i = 0; i < elements.length; i++) {
@@ -14,6 +17,43 @@
         }
     }
 </script>
+
+<style lang="css" global>
+    /* ## Language Selector */
+    #Lang {
+        /* Transform */
+        position: absolute;
+        transform: translateY(28px);
+        margin-left: 10vw;
+        z-index: 100;
+    }
+    
+    #Lang button {
+        /* Font */
+        font-family: var(--txt1);
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14pt;
+        
+        /* Button */
+        background-color: transparent;
+        border-color: transparent;
+        cursor: pointer;
+        
+        /* Color */
+        color: var(--clr4);
+    }
+    
+    .underlined {
+        text-decoration: underline;
+    }
+</style>
+
+<!--
+## Language Selector menu
+Selects Language and hotswaps Module
+DO NOT, AT ANY COST, TOUCH!!!
+-->
 <div id='Lang'>
     <!-- svelte-ignore a11y-missing-attribute -->
     <button class='langSelect underlined' on:click={ () => {

@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Frank+Ruhl+Libre:wght@400;500;700&display=swap');
 
+/* Variables */
 :root {
     /* Color Variables */
-    --clr0: #E8E8DB;
-    --clr1: #B6B5A8;
+    --clr0: #e8e8db;
+    --clr1: #b6b5a8;
     --clr2: #858377;
     --clr3: #636057;
     --clr4: #494846;
@@ -13,26 +14,46 @@
     --txt1: 'Frank Ruhl Libre', 'Times New Roman', serif;
 }
 
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
+    overflow-x: hidden;
+    max-width: 100vw;
 }
 
-body {
-    background-color: var(--clr0);
-}
 
+/* ## Text */
 h1 {
     /* Font */
     font-family: var(--txt0);
     font-style: normal;
-    font-weight: 400pt;
+    font-weight: 400;
     font-size: 54pt;
     
     /* Color */
     color: var(--clr4);
+}
+
+h2 {
+    /* Font */
+    font-family: var(--txt0);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32pt;
+
+    /* Color */
+    color: var(--clr4);
+}
+
+h4 {
+    /* Font */
+    font-family: var(--txt1);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20pt;
 }
 
 h5 {
@@ -47,47 +68,405 @@ h5 {
     color: var(--clr3);
 }
 
-#Lang {
-    /* Transform */
-    position: absolute;
-    transform: translate(54px, 28px);
-    z-index: 1;
+p {
+    /* Font*/
+    font-family: var(--txt1);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20pt;
+    line-height: 28pt;
 }
 
-#Lang button {
+strong {
+    /* Font */
+    font-weight: 500;
+}
+
+
+/* ## Objects */
+img {
+    /* Display */
+    display: block;
+    
+    /* Transform */
+    width: auto;
+    height: 100%;
+}
+
+table {
+    /* Display */
+    display: block;
+    border-spacing: 0;
+
+    /* Transfrom */
+    width: 100%;
+    
+    /* Border */
+    border-color: var(--clr4);
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 20px;
+}
+
+th {
     /* Font */
     font-family: var(--txt1);
     font-style: normal;
     font-weight: 400;
-    font-size: 14pt;
+    font-size: 20pt;   
+    text-align: center;
+    white-space: nowrap;
+    
+    /* Transform */
+    width: 50%;
+    padding: 5px 10px;
 
-    /* Button */
-    background-color: transparent;
-    border-color: transparent;
-    cursor: pointer;
-
-    /* Color */
-    color: var(--clr4);
+    /* Border */
+    border-color: var(--clr4);
+    border-bottom-style: solid;
+    border-width: 3px;
 }
 
-.underlined {
-    text-decoration: underline;
+th:first-child {
+    /* Border */
+    border-right-style: solid;
 }
 
+tr:last-child th {
+    /* Border */
+    border-bottom-style: none;
+}    
+
+footer {
+    /* Font*/
+    font-family: var(--txt1);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16pt;
+    white-space: nowrap;
+    text-align: center;
+    color: var(--clr1);
+
+    /* Transform */
+    padding: 10pt 0 5pt 0;
+    max-width: 17.5vw;
+    margin: 10vw 0 0 10vw;
+
+    /* Background */
+    background-color: var(--clr4);
+
+    /* Border */
+    border-top-left-radius: 32.5px;
+    border-top-right-radius: 32.5px;
+}
+
+
+/* Main Parents */
+body {
+    /* Background */
+    background-color: var(--clr0);
+}
+
+body::-webkit-scrollbar {
+    width: 13px;
+}
+
+body::-webkit-scrollbar-track {
+    background-color: rgba(73, 72, 70, 0.1);
+    border-radius: 1em;
+    margin: 8px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: rgba(73, 72, 70, 0.125);
+    border-radius: 1em;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* Global IDs/Classes */
+.image {
+    /* Display */
+    flex-grow: 1;
+    flex-shrink: 2;
+
+    /* Transform*/
+    min-width: 260px;
+    height: 100%;
+
+    /* Background */
+    background-size: cover;
+    background-position: center;
+    
+    /* Border */
+    border-radius: 30px;
+}
+
+#Content {
+    /* Transform */
+    padding: 0 10vw;
+
+    /* Display */
+    display: flex;
+    flex-direction: column;
+    gap: 20em;
+}
+
+
+/* ## Start */
 #Start {
     /* Transform */
-    min-width: 100vw;
+    min-width: 100%;
     min-height: 100vh;
 }
 
 #Start div {
-    /* Flexbox */
+    /* Display */
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     
     /* Transform */
-    min-width: 100vw;
+    min-width: 100%;
     min-height: 100vh;
+}
+
+
+/* ## Projects */
+#Projects {
+    /* Display */
+    display: flex;
+    flex-direction: column;
+    gap: 10em;
+
+    /* Transform */
+    min-width: 100%;
+    min-height: 100vh;
+}
+
+#Gallery {
+    /* Display */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 5em;
+    row-gap: 7.5em;
+}
+
+#Gallery figure {
+    /* Display */
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    position: block;
+    flex-basis: 300px;
+    flex-grow: 1;
+    flex-shrink: 3;
+
+    /* Transform */
+    min-width: 29%;
+    height: 330px;
+
+    overflow: hidden;
+}
+
+#Gallery div {
+    /* Display */
+    display: block;
+    
+    /* Transform */
+    width: auto;
+    height: 100%;
+ 
+    /* Background */
+    background-position: center;
+    background-size: cover;
+    
+    /* Border */
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+#Gallery figcaption {
+    /* Font */
+    font-family: var(--txt1);
+    font-weight: 400;
+    font-size: 18pt;
+
+    /* Transform */
+    position: absolute;
+    width: 100%;
+    z-index: 100;
+    transform: translateY(330px);
+}
+
+
+/* ## About */
+#About {
+    /* Display */
+    display: flex;
+    flex-direction: column;
+    gap: 15em;
+
+    /* Transform */
+    width: 100%;
+    min-height: 100vh;
+}
+
+#About p {
+    max-width: 68ch;
+}
+
+#About .infobox {
+    /* Display */
+    display: flex;
+    justify-content: space-around;
+    gap: 5em;
+    min-height: 50vh;
+}
+
+#About .infobox figure {
+    /* Display*/
+    display: flex;
+    justify-content: space-between;
+    gap: 2.5em; 
+    flex-wrap: wrap;
+
+    /* Transform */
+    min-width: 540px;
+}
+
+#About .infobox a {
+    /* Font */
+    color: var(--clr4);
+    text-decoration: underline;
+}
+
+#About .infobox .infoboxData {
+    /* Transform */
+    width: 50%;
+    height: auto;
+}
+
+#Hobbies {
+    /* Display*/
+    display: flex;
+    flex-direction: column;
+    gap: 10em;
+}
+
+
+/* Contact */
+#Contact {
+    /* Display */
+    display: flex;
+    flex-direction: column;
+    gap: 6em;
+}
+
+#Contact .infobox {
+    /* Display */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 5em;
+
+    /* Transform */
+    width: 100%;
+    min-height: 30vh;
+    padding: 5em;
+    padding-bottom: 3em;
+
+    /* Border */
+    border-style: solid;
+    border-radius: 111px;
+}
+
+#ContactData {
+    /* Transform */
+    gap: 3.5em;
+}
+
+#ContactData a {
+    /* Font */
+    color: var(--clr4);
+    text-decoration: underline;
+    text-decoration-thickness: 2.5px;
+}
+
+#ContactData a:hover {
+    /* Font */
+    text-decoration: none;
+}
+
+#Contact .infobox .infoboxData {
+    /* Display */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#Contact .infobox .infoboxData p {
+    /* Transform*/
+    text-align: center;
+    max-width: 34ch;
+}
+
+#Contact figure div {
+    /* Transform */
+    height: 20em;
+    
+    /* Border */
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+#Contact figcaption {
+    /* Font*/
+    font-family: var(--txt1);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16pt;
+    line-height: 28pt;
+}
+
+/* SocialMedia */
+#ContactMedia {
+    /* Display */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 2em;
+}
+
+.contactMediaIcon {
+    /* Disply */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* Transform*/
+    width: 6em;
+    height: 6em;
+    padding: 15px;
+
+    /* Background */
+    background-color: var(--clr1);
+    
+    /* Border */
+    border-radius: 30px;
+    
+    overflow: hidden;
+}
+
+.contactMediaIcon path {
+    /* Path */
+    fill: var(--clr0);
 }
