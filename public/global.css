@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Frank+Ruhl+Libre:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Frank+Ruhl+Libre:wght@400;500;700&display=swap');
 
 /* Variables */
 :root {
@@ -30,8 +30,9 @@ h1 {
     /* Font */
     font-family: var(--txt0);
     font-style: normal;
-    font-weight: 400;
+    font-weight: 600;
     font-size: 54pt;
+    white-space: nowrap;
     
     /* Color */
     color: var(--clr4);
@@ -197,6 +198,7 @@ html {
     /* Transform*/
     min-width: 260px;
     height: 100%;
+    max-height: 80vh;
 
     /* Background */
     background-size: cover;
@@ -217,6 +219,42 @@ html {
 }
 
 
+/* ## Language Selector */
+#Lang {
+    /* Transform */
+    position: absolute;
+    transform: translateY(2em);
+    margin-left: 10vw;
+    z-index: 100;
+}
+
+#Lang button {
+    /* Font */
+    font-family: var(--txt1);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14pt;
+    
+    /* Button */
+    background-color: transparent;
+    border-color: transparent;
+    cursor: pointer;
+    
+    /* Color */
+    color: var(--clr4);
+}
+
+.underlined {
+    text-decoration: underline;
+}
+
+
+
+/*
+     /-- /--\  \  | ----- ---- \  | -----
+    |   |   | |\ |   |   |-   |\ |   |
+    \-- \--/ | \    |   ---  | \    |
+*/
 /* ## Start */
 #Start {
     /* Transform */
@@ -469,4 +507,71 @@ html {
 .contactMediaIcon path {
     /* Path */
     fill: var(--clr0);
+}
+
+
+
+
+/* # Media Querries */
+
+/* ## Mobile */
+@media only screen and (max-width: 1280px) and (max-height: 2560px) {
+    /* Text */    
+    h1 {
+        /* Font */
+        font-size: 24pt;
+    }
+
+    h5 {
+        /* Font */
+        font-size: 12pt;
+        letter-spacing: 7.5pt;
+    }
+    
+    
+    /* Global IDs/Classes */
+    #Content {
+        /* Transform */
+        padding: 0 8vw;
+        width: 100vw;
+    
+        /* Display */
+        gap: 20em;
+
+        overflow-x: hidden;
+    }
+    
+    
+    /* Body */
+    body {
+        /* Display */
+        display: flex;
+        justify-content: center;
+        
+        /* Transform */
+        max-width: 100vw;
+    }
+
+    
+    /* ## Language Selector */
+    #Lang {
+        /* Transform */
+        transform: translate(-35vw, 1em);
+    }
+
+    #Lang button {
+        /* Font */
+        font-size: 12pt;
+    }
+    
+    /*
+         /-- /--\  \  | ----- ---- \  | -----
+        |   |   | |\ |   |   |-   |\ |   |
+        \-- \--/ | \    |   ---  | \    |
+    */
+    /* ## Start */
+    #Start div {
+        /* Transform */
+        padding-bottom: 10vh;
+    }
 }

@@ -1,3 +1,5 @@
+<div>
+
 <section id='Start'>
     <div>
         <h1>Борис Костадинов</h1>
@@ -39,3 +41,5 @@
         </figure>
     </div>
 </section>
+
+</div>
