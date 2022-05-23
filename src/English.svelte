@@ -1,5 +1,10 @@
-<div>
+<script>
+    import Burger from './Burger.svelte';
+</script>
 
+<Burger text={['Start', 'Projects', 'About', 'Contact']}/>
+
+<div>
 <!-- Start -->
 <section id='Start'>
     <div>
@@ -8,7 +13,7 @@
     </div>
 </section>
 
-<body id='Content'>
+<main id='Content'>
     <!-- Projects -->
     <section id='Projects'>
         <h1>Projects</h1>
@@ -94,7 +99,11 @@
             </div>
     
             <!-- Music -->
-            <div class='infobox'>
+            <div class='infobox reverse'>
+                <figure class='infoboxData'>
+                    <div style='background-color: black' class='image'></div>
+                    <div style='background-color: black' class='image'></div>
+                </figure>
                 <div class='infoboxData'>
                     <h4>Music</h4>
                     <br>
@@ -109,10 +118,6 @@
                         <a><strong>vlajdsheetmusic.com</strong></a>
                     </p>
                 </div>
-                <figure class='infoboxData'>
-                    <div style='background-color: black' class='image'></div>
-                    <div style='background-color: black' class='image'></div>
-                </figure>
             </div>
     
             <!-- Languages -->
@@ -160,7 +165,11 @@
             </div>
         
             <!-- Programming -->
-            <div class='infobox'>
+            <div class='infobox reverse'>
+                <figure class='infoboxData'>
+                    <div style='background-color: black' class='image'></div>
+                    <div style='background-color: black' class='image'></div>
+                </figure>
                 <div class='infoboxData'>
                     <h4>Programming</h4>
                     <br>
@@ -172,10 +181,6 @@
                         Also, check out the open-source game engine I'm developing in Rust: <a href='https://github.com/slackers123/engine' target='_blank'><strong>github.com/slackers123/engine</strong></a>
                     </p>
                 </div>
-                <figure class='infoboxData'>
-                    <div style='background-color: black' class='image'></div>
-                    <div style='background-color: black' class='image'></div>
-                </figure>
             </div>
         </div>
     </section>
@@ -204,7 +209,7 @@
             </figure>
         </div>
     </section>
-</body>
+</main>
 
 <!-- End Footer -->
 <footer>

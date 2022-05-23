@@ -12,6 +12,15 @@
     /* Font Variables */
     --txt0: 'Cinzel', 'Times New Roman', serif;
     --txt1: 'Frank Ruhl Libre', 'Times New Roman', serif;
+
+    /* Font Sizes Desktop */
+    --h1: 54pt;
+    --h2: 32pt;
+    --p: 20pt;
+    
+    /* Font Sizes Mobile */
+    --h1m: 24pt;
+    --pm: 18pt;
 }
 
 
@@ -20,7 +29,7 @@
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
     max-width: 100vw;
 }
 
@@ -31,7 +40,7 @@ h1 {
     font-family: var(--txt0);
     font-style: normal;
     font-weight: 600;
-    font-size: 54pt;
+    font-size: var(--h1);
     white-space: nowrap;
     
     /* Color */
@@ -43,7 +52,7 @@ h2 {
     font-family: var(--txt0);
     font-style: normal;
     font-weight: 400;
-    font-size: 32pt;
+    font-size: var(--h2);
 
     /* Color */
     color: var(--clr4);
@@ -54,7 +63,7 @@ h4 {
     font-family: var(--txt1);
     font-style: normal;
     font-weight: 700;
-    font-size: 20pt;
+    font-size: var(--p);
 }
 
 h5 {
@@ -62,7 +71,7 @@ h5 {
     font-family: var(--txt1);
     font-style: normal;
     font-weight: 400;
-    font-size: 20pt;
+    font-size: var(--p);
     letter-spacing: 10pt;
     
     /* Color */
@@ -74,8 +83,8 @@ p {
     font-family: var(--txt1);
     font-style: normal;
     font-weight: 400;
-    font-size: 20pt;
-    line-height: 28pt;
+    font-size: var(--p);
+    line-height: calc(var(--p) * 1.4);
 }
 
 strong {
@@ -114,7 +123,7 @@ th {
     font-family: var(--txt1);
     font-style: normal;
     font-weight: 400;
-    font-size: 20pt;   
+    font-size: var(--p);   
     text-align: center;
     white-space: nowrap;
     
@@ -166,6 +175,11 @@ footer {
 body {
     /* Background */
     background-color: var(--clr0);
+
+    overflow-x: hidden;
+
+    /* Transform */
+    max-width: 100vw;
 }
 
 body::-webkit-scrollbar {
@@ -188,6 +202,34 @@ html {
     scroll-behavior: smooth;
 }
 
+nav {
+    /* Display */
+    display: flex;
+    flex-direction: row;
+    gap: 5em;
+
+    /* Transform */
+    position: fixed;
+    top: 1em;
+    right: 2em;
+    padding: 1em 7.5em;
+    z-index: 200;
+
+    /* Border */
+    border-radius: 5em;
+    border-style: solid;
+    border-width: 3px;
+    border-color: var(--clr4);
+    background-color: var(--clr2);
+}
+
+nav a {
+    /* Font */
+    font-family: var(--txt1);
+    color: var(--clr0);
+    font-size: var(--p);
+}
+
 
 /* Global IDs/Classes */
 .image {
@@ -196,6 +238,7 @@ html {
     flex-shrink: 2;
 
     /* Transform*/
+    width: 100%;
     min-width: 260px;
     height: 100%;
     max-height: 80vh;
@@ -206,6 +249,11 @@ html {
     
     /* Border */
     border-radius: 30px;
+}
+
+.reverse {
+    /* Display */
+    flex-direction: row-reverse;
 }
 
 #Content {
@@ -251,9 +299,12 @@ html {
 
 
 /*
-     /-- /--\  \  | ----- ---- \  | -----
-    |   |   | |\ |   |   |-   |\ |   |
-    \-- \--/ | \    |   ---  | \    |
+    ░█████╗░░█████╗░███╗░░██╗████████╗███████╗███╗░░██╗████████╗
+    ██╔══██╗██╔══██╗████╗░██║╚══██╔══╝██╔════╝████╗░██║╚══██╔══╝
+    ██║░░╚═╝██║░░██║██╔██╗██║░░░██║░░░█████╗░░██╔██╗██║░░░██║░░░
+    ██║░░██╗██║░░██║██║╚████║░░░██║░░░██╔══╝░░██║╚████║░░░██║░░░
+    ╚█████╔╝╚█████╔╝██║░╚███║░░░██║░░░███████╗██║░╚███║░░░██║░░░
+    ░╚════╝░░╚════╝░╚═╝░░╚══╝░░░╚═╝░░░╚══════╝╚═╝░░╚══╝░░░╚═╝░░░
 */
 /* ## Start */
 #Start {
@@ -375,10 +426,10 @@ html {
     display: flex;
     justify-content: space-between;
     gap: 2.5em; 
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
 
     /* Transform */
-    min-width: 540px;
+    min-width: 640px;
 }
 
 #About .infobox a {
@@ -519,13 +570,19 @@ html {
     /* Text */    
     h1 {
         /* Font */
-        font-size: 24pt;
+        font-size: var(--h1m);
     }
 
     h5 {
         /* Font */
         font-size: 12pt;
         letter-spacing: 7.5pt;
+    }
+
+    p {
+        /* Font */
+        font-size: var(--pm);
+        line-height: calc(var(--pm) * 1.3);
     }
     
     
@@ -541,13 +598,14 @@ html {
         overflow-x: hidden;
     }
     
+    .reverse {
+        /* Display */
+        flex-direction: row;
+    }
+    
     
     /* Body */
     body {
-        /* Display */
-        display: flex;
-        justify-content: center;
-        
         /* Transform */
         max-width: 100vw;
     }
@@ -565,13 +623,39 @@ html {
     }
     
     /*
-         /-- /--\  \  | ----- ---- \  | -----
-        |   |   | |\ |   |   |-   |\ |   |
-        \-- \--/ | \    |   ---  | \    |
+        ░█████╗░░█████╗░███╗░░██╗████████╗███████╗███╗░░██╗████████╗
+        ██╔══██╗██╔══██╗████╗░██║╚══██╔══╝██╔════╝████╗░██║╚══██╔══╝
+        ██║░░╚═╝██║░░██║██╔██╗██║░░░██║░░░█████╗░░██╔██╗██║░░░██║░░░
+        ██║░░██╗██║░░██║██║╚████║░░░██║░░░██╔══╝░░██║╚████║░░░██║░░░
+        ╚█████╔╝╚█████╔╝██║░╚███║░░░██║░░░███████╗██║░╚███║░░░██║░░░
+        ░╚════╝░░╚════╝░╚═╝░░╚══╝░░░╚═╝░░░╚══════╝╚═╝░░╚══╝░░░╚═╝░░░
     */
     /* ## Start */
     #Start div {
         /* Transform */
         padding-bottom: 10vh;
+    }
+
+
+    /* ## About */
+    #About {
+        /* Display */
+        gap: 5em;
+    }
+    
+    #About .infobox {
+        /* Display */
+        flex-direction: column-reverse;
+    }
+
+    #About .infobox .infoboxData {
+        /* Transform */
+        min-width: 100%;
+        min-height: 640px;
+    }
+
+    #About .infobox .infoboxData .image {
+        /* Transform */
+        min-height: 540px;
     }
 }
