@@ -3,7 +3,8 @@
     let Module;
     onMount( async () => Module = (await import('./English.svelte')).default );
     
-    // ## Language Selector
+    // █░░ ▄▀█ █▄░█ █▀▀ █░█ ▄▀█ █▀▀ █▀▀   █▀ █▀▀ █░░ █▀▀ █▀▀ ▀█▀ █▀█ █▀█
+    // █▄▄ █▀█ █░▀█ █▄█ █▄█ █▀█ █▄█ ██▄   ▄█ ██▄ █▄▄ ██▄ █▄▄ ░█░ █▄█ █▀▄
     // Visually changes the selected language 
     function selectLang(index) {
         let elements = document.getElementsByClassName('langSelect');
@@ -19,7 +20,8 @@
 </script>
 
 <!--
-## Language Selector menu
+█░░ ▄▀█ █▄░█ █▀▀ █░█ ▄▀█ █▀▀ █▀▀   █▀ █▀▀ █░░ █▀▀ █▀▀ ▀█▀ █▀█ █▀█
+█▄▄ █▀█ █░▀█ █▄█ █▄█ █▀█ █▄█ ██▄   ▄█ ██▄ █▄▄ ██▄ █▄▄ ░█░ █▄█ █▀▄
 Selects Language and hotswaps Module
 DO NOT, AT ANY COST, TOUCH!!!
 -->
@@ -42,4 +44,6 @@ DO NOT, AT ANY COST, TOUCH!!!
         fn();
     }}>Български</button>
 </div>
+
+<!-- Current Language Module -->
 <svelte:component this={Module}></svelte:component>

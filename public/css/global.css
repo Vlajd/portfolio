@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Frank+Ruhl+Libre:wght@400;500;700&display=swap');
+@import url('./root.css');
+@import url('./burger.css');
+@import url('./lang.css');
+@import url('./content/content.css');
+
+/* ## Text */
+h1 {
+    /* Font */
+    font-family: var(--txt0);
+    font-style: normal;
+    font-weight: 600;
+    font-size: var(--h1);
+    white-space: nowrap;
+    
+    /* Color */
+    color: var(--clr4);
+}
+
+h2 {
+    /* Font */
+    font-family: var(--txt0);
+    font-style: normal;
+    font-weight: 400;
+    font-size: var(--h2);
+
+    /* Color */
+    color: var(--clr4);
+}
+
+h4 {
+    /* Font */
+    font-family: var(--txt1);
+    font-style: normal;
+    font-weight: 700;
+    font-size: var(--p);
+}
+
+h5 {
+    /* Font */
+    font-family: var(--txt1);
+    font-style: normal;
+    font-weight: 400;
+    font-size: var(--p);
+    letter-spacing: 10pt;
+    
+    /* Color */
+    color: var(--clr3);
+}
+
+p {
+    /* Font*/
+    font-family: var(--txt1);
+    font-style: normal;
+    font-weight: 400;
+    font-size: var(--p);
+    line-height: calc(var(--p) * 1.4);
+}
+
+strong {
+    /* Font */
+    font-weight: 500;
+}
+
+
+/* ## Objects */
+img {
+    /* Display */
+    display: block;
+    
+    /* Transform */
+    width: auto;
+    height: 100%;
+}
+
+table {
+    /* Display */
+    display: block;
+    border-spacing: 0;
+
+    /* Transfrom */
+    width: 100%;
+    
+    /* Border */
+    border-color: var(--clr4);
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 20px;
+}
+
+th {
+    /* Font */
+    font-family: var(--txt1);
+    font-style: normal;
+    font-weight: 400;
+    font-size: var(--p);   
+    text-align: center;
+    white-space: nowrap;
+    
+    /* Transform */
+    width: 50%;
+    padding: 5px 10px;
+
+    /* Border */
+    border-color: var(--clr4);
+    border-bottom-style: solid;
+    border-width: 3px;
+}
+
+th:first-child {
+    /* Border */
+    border-right-style: solid;
+}
+
+tr:last-child th {
+    /* Border */
+    border-bottom-style: none;
+}
+
+/* Main Parents */
+body {
+    /* Background */
+    background-color: var(--clr0);
+
+    overflow-x: hidden;
+
+    /* Transform */
+    max-width: 100vw;
+}
+
+body::-webkit-scrollbar {
+    width: 13px;
+}
+
+body::-webkit-scrollbar-track {
+    background-color: rgba(73, 72, 70, 0.1);
+    border-radius: 1em;
+    margin: 8px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: rgba(73, 72, 70, 0.125);
+    border-radius: 1em;
+}
+
+footer {
+    /* Font*/
+    font-family: var(--txt1);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16pt;
+    white-space: nowrap;
+    text-align: center;
+    color: var(--clr0);
+
+    /* Transform */
+    padding: 10pt 0 5pt 0;
+    max-width: 17.5vw;
+    margin: 10vw 0 0 10vw;
+
+    /* Background */
+    background-color: var(--clr3);
+
+    /* Border */
+    border-top-left-radius: 32.5px;
+    border-top-right-radius: 32.5px;
+}
+
+.image {
+    /* Display */
+    flex-grow: 1;
+    flex-shrink: 2;
+
+    /* Transform*/
+    width: 100%;
+    min-width: 260px;
+    height: 100%;
+    max-height: 80vh;
+
+    /* Background */
+    background-size: cover;
+    background-position: center;
+    
+    /* Border */
+    border-radius: 30px;
+}
+
+/* ## Mobile */
+@media only screen and (max-width: 1280px) and (max-height: 2560px) {
+    /* Text */    
+    h1 {
+        /* Font */
+        font-size: var(--h1m);
+    }
+ 
+    h5 {
+        /* Font */
+        font-size: 12pt;
+        letter-spacing: 7.5pt;
+    }
+
+    p {
+        /* Font */
+        font-size: var(--pm);
+        line-height: calc(var(--pm) * 1.3);
+    }
+
+    /* Body */
+    body {
+        /* Transform */
+        max-width: 100vw;
+    }
+}

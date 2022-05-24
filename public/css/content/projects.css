@@ -1,0 +1,69 @@
+/* ## Projects */
+#Projects {
+    /* Display */
+    display: flex;
+    flex-direction: column;
+    gap: 10em;
+
+    /* Transform */
+    min-width: 100%;
+    min-height: 100vh;
+}
+
+#Gallery {
+    /* Display */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 5em;
+    row-gap: 7.5em;
+}
+
+#Gallery figure {
+    /* Display */
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    position: block;
+    flex-basis: 300px;
+    flex-grow: 1;
+    flex-shrink: 3;
+
+    /* Transform */
+    min-width: 29%;
+    height: 330px;
+
+    overflow: hidden;
+}
+
+#Gallery div {
+    /* Display */
+    display: block;
+    
+    /* Transform */
+    width: auto;
+    height: 100%;
+ 
+    /* Background */
+    background-position: center;
+    background-size: cover;
+    
+    /* Border */
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+#Gallery figcaption {
+    /* Font */
+    font-family: var(--txt1);
+    font-weight: 400;
+    font-size: 18pt;
+
+    /* Transform */
+    position: absolute;
+    width: 100%;
+    z-index: 100;
+    transform: translateY(330px);
+}
