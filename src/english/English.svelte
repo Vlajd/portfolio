@@ -1,6 +1,48 @@
 <script>
     import Burger from './Burger.svelte';
     import MediaQuery from './MediaQuery.svelte';
+    import Slider from './Slider.svelte';
+
+    export let project_image_source_name;
+
+    let project_images = [
+        {
+            image: './img/projects/full/' + project_image_source_name[0],
+            image_prev: './img/projects/preview/' + project_image_source_name[0],
+            caption: 'Train In Rumania',
+            alt: 'A Train driving through the nature of Rumania.',
+        },
+        {
+            image: './img/projects/full/' + project_image_source_name[1],
+            image_prev: './img/projects/preview/' + project_image_source_name[1],
+            caption: 'Kissing Pigeons',
+            alt: 'Two Pigeons enjoying their time together on a roof.',
+        },
+        {
+            image: './img/projects/full/' + project_image_source_name[2],
+            image_prev: './img/projects/preview/' + project_image_source_name[2],
+            caption: 'Bell and Cheese',
+            alt: 'Glass bell with cheddar in the background.',
+        },
+        {
+            image: './img/projects/full/' + project_image_source_name[3],
+            image_prev: './img/projects/preview/' + project_image_source_name[3],
+            caption: 'Point Chaplin N°1',
+            alt: 'Chaplin Illustration.',
+        },
+        {
+            image: './img/projects/full/' + project_image_source_name[4],
+            image_prev: './img/projects/preview/' + project_image_source_name[4],
+            caption: 'Point Chaplin N°2',
+            alt: 'Chaplin Illustration.',
+        },
+        {
+            image: './img/projects/full/' + project_image_source_name[5],
+            image_prev: './img/projects/preview/' + project_image_source_name[5],
+            caption: 'Burning Castle',
+            alt: 'Photoshop of imaginary burning Castle.',
+        }
+    ];
 </script>
 
 <Burger text={['Start', 'Projects', 'About', 'Contact']}/>
@@ -18,38 +60,24 @@
     <!-- Projects -->
     <section id='Projects'>
         <h1>Projects</h1>
-        <div id='Gallery'>
-            <!-- Train In Rumania -->
-            <figure>
-                <div style='background-image: url("./img/TrainInRumania.jpg")' alt='A Train driving through the nature of Rumania.' class='image'></div>
-                <figcaption>Train in Rumania</figcaption>
-            </figure>
-            <!-- Kissing Pigeons -->
-            <figure>
-                <div style='background-image: url("./img/KissingPigeons.jpg")' alt='Two Pigeons enjoying their time together on a roof.' class='image'></div>
-                <figcaption>Kissing Pigeons</figcaption>
-            </figure>
-            <!-- Bell and Cheese -->
-            <figure>
-                <div style='background-image: url("./img/GlasAndCheese.jpg")' src='./img/GlasAndCheese.jpg' alt='Glass bell with cheddar in the background.' class='image'></div>
-                <figcaption>Bell and Cheese</figcaption>
-            </figure>
-            <!-- Pointchaplin N°1 -->
-            <figure>
-                <div style='background-image: url("./img/Punktechaplin0.jpg")' alt='Chaplin Illustration.' class='image'></div>
-                <figcaption>Point Chaplin N°1</figcaption>
-            </figure>
-            <!-- Pointchaplin N°2 -->
-            <figure>
-                <div style='background-image: url("./img/Punktechaplin1.jpg")' alt='Chaplin Illustration.' class='image'></div>
-                <figcaption>Point Chaplin N°2</figcaption>
-            </figure>
-            <!-- Burning Castle -->
-            <figure>
-                <div style='background-image: url("./img/BurningCastle.jpg")' alt='Photoshop of imaginary burning Castle.' class='image'></div>
-                <figcaption>Burning Castle</figcaption>
-            </figure>
-        </div>
+        <MediaQuery query = '(min-width: 1280px)' let:matches>
+            {#if matches}
+                <div id='Gallery'>
+                    {#each project_images as image}
+                        <figure>
+                            <div style='background-image: url("{image.image_prev}")'
+                                 alt='{image.alt}' class='image'></div>
+                            <figcaption>{image.caption}</figcaption>
+                        </figure>    
+                    {/each}
+                </div>
+            {/if}
+            {#if !matches}
+                <div id='Gallery'>
+                    <Slider images={project_images}></Slider>
+                </div>
+            {/if}
+        </MediaQuery>
     </section>
     
     <!-- About -->
@@ -69,7 +97,7 @@
                 </p>
             </div>
             <figure class='infoboxData'>
-                <div style='background-image: url("./img/FamilienFoto.jpg")' class='image'></div>
+                <div style='background-image: url("./img/about/preview/FamilienFoto.jpg")' class='image' alt='Photoshopped image with clones of me jamming on all kinds of instruments'></div>
             </figure>
         </div>
     
@@ -227,9 +255,7 @@
                             <div style='background-color: black' class='image'></div>
                         </div>
                     {/if}
-                </MediaQuery>
-                <MediaQuery query = '(min-width: 1280px)' let:matches>
-                    {#if matches}
+                    {#if !matches}
                         <div style='background-color: black' class='image'></div>
                         <figcaption><strong>Boris Krassimirov Kostadinov<br>Vienna, Austria</strong></figcaption>
                     {/if}    
