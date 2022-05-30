@@ -54,7 +54,7 @@
     max-width: 34ch;
 }
 
-#Contact figure div {
+#Contact figure .image {
     /* Transform */
     height: 20em;
     
@@ -78,6 +78,7 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    flex-wrap: nowrap;
     gap: 2em;
 }
 
@@ -117,5 +118,70 @@
     #Contact .infobox {
         /* Border */
         border-style: none;
+        padding: 0;
+
+        /* Display */
+        gap: 1em;
+    }
+
+    #Contact .infoboxData:first-child {
+        /* Display */
+        gap: 2em;
+    }
+    
+    #Contact figure {
+        /* Display */
+        gap: 1em;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        /* Transform */
+        transform: scale(0.9);
+    }
+    
+    #Contact figure .image {        
+        /* Border */
+        border-radius: 20px;
+        
+        /* Transform*/
+        width: 50%;
+        min-width: 200px;
+        max-width: 30vw;
+        margin-left: 1em;
+
+        /* Display */
+        flex-shrink: 2;
+    }
+    
+    #Contact figcaption {
+        visibility: hidden;
+    }
+    
+    #ContactMedia {
+        /* Display */
+        flex-wrap: nowrap;
+        flex-direction: row;
+        gap: 0;
+    }
+
+    #ContactMedia a {
+        /* Transform */
+        transform: scale(0.8);
+    }
+
+    .contactMediaIcon {
+        /* Display */
+        flex-grow: 2;
+        flex-shrink: 2;
+        flex-basis: 50%;
+
+        /* Transform */
+        padding: 0;
+    }
+    
+    .contactMediaVPadding {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
     }
 }

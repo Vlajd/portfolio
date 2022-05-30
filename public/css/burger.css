@@ -17,7 +17,7 @@ nav a {
     font-family: var(--txt1);
     color: var(--clr0);
     font-size: var(--p);
-    
+
     cursor: pointer;
 }
     
@@ -30,7 +30,7 @@ nav a {
     border-style: solid;
     border-width: 2.75px;
     border-color: var(--clr3);
-    background-color: var(--clr2);   
+    background-color: var(--clr2);
 }
 
 #ClosedBurger {

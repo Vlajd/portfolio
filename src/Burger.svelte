@@ -5,7 +5,7 @@
     <a href='#Contact'>{text[3]}</a>
 </nav>
 <nav id='ClosedBurger' class='burgerMenu' on:click={()=>toggle_menu()}>
-    <svg xmlns="http://www.w3.org/2000/svg" width="72.5" height="48.5" viewBox="0 0 72.5 48.5">
+    <svg width="72.5" height="48.5" viewBox="0 0 72.5 48.5">
         <g id="Burgermenu_Closed" transform="translate(-1805.75 -25.75)">
           <line id="Burgermenu_3" x1="64" transform="translate(1810 30)" fill="none" stroke-linecap="round" stroke-width="7"/>
           <line id="Burgermenu_2" x1="64" transform="translate(1810 50)" fill="none" stroke-linecap="round" stroke-width="7"/>
