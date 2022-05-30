@@ -28,9 +28,21 @@ nav a {
     /* Border */
     border-radius: 5em;
     border-style: solid;
-    border-width: 2.75px;
+    border-width: 5.5px;
     border-color: var(--clr3);
     background-color: var(--clr2);
+    
+    /* Display */
+    display: flex;
+    flex-direction: row;
+    gap: 5em;
+
+    /* Transform */
+    position: fixed;
+    top: 1em;
+    right: 2em;
+    
+    z-index: 2
 }
 
 #ClosedBurger {
@@ -66,8 +78,17 @@ nav a {
     #OpenBurger {
         /* Transform */
         padding: 1em;
+        right: 1;
 
         /* Border */
         border-radius: 3em;
+
+        /* Display */
+        gap: 1em;
+        flex-direction: column;
+    }
+        
+    #ClosedBurger {
+        transform: scale(0.75) translate(4em, -1.5em);
     }
 }

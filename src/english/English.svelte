@@ -1,7 +1,7 @@
 <script>
-    import Burger from './Burger.svelte';
-    import MediaQuery from './MediaQuery.svelte';
-    import Slider from './Slider.svelte';
+    import Burger from '../Burger.svelte';
+    import MediaQuery from '../MediaQuery.svelte';
+    import Slider from '../Slider.svelte';
 
     export let project_image_source_name;
 
