@@ -19,6 +19,9 @@
     /* Font Sizes Mobile */
     --h1m: 24pt;
     --pm: 16pt;
+    
+    /* Animation Speeds */
+    --anim0: 200ms;
 }
 
 * {

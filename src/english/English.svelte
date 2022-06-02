@@ -2,6 +2,7 @@
     import Burger from '../Burger.svelte';
     import MediaQuery from '../MediaQuery.svelte';
     import Slider from '../Slider.svelte';
+    import Figure from '../Figure.svelte';
 
     export let project_image_source_name;
 
@@ -64,11 +65,7 @@
             {#if matches}
                 <div id='Gallery'>
                     {#each project_images as image}
-                        <figure>
-                            <div style='background-image: url("{image.image_prev}")'
-                                 alt='{image.alt}' class='image'></div>
-                            <figcaption>{image.caption}</figcaption>
-                        </figure>    
+                         <Figure image={image} section_tag='projects_figure'/>   
                     {/each}
                 </div>
             {/if}
@@ -97,7 +94,7 @@
                 </p>
             </div>
             <figure class='infoboxData'>
-                <div style='background-image: url("./img/about/preview/FamilienFoto.jpg")' class='image' alt='Photoshopped image with clones of me jamming on all kinds of instruments'></div>
+                <div style='background-image: url("./img/about/preview/FamilienFoto.jpg")' class='image' alt='Photoshopped image with clones of me jamming on all kinds of instruments'/>
             </figure>
         </div>
     
@@ -111,8 +108,8 @@
             <!-- Skateboarding -->
             <div class='infobox'>
                 <figure class='infoboxData'>
-                    <div style='background-color: black' class='image'></div>
-                    <div style='background-color: black' class='image'></div>
+                    <div style='background-color: black' class='image'/>
+                    <div style='background-color: black' class='image'/>
                 </figure>
                 <div class='infoboxData'>
                     <h4>Skateboarding</h4>
@@ -130,8 +127,8 @@
             <!-- Music -->
             <div class='infobox reverse'>
                 <figure class='infoboxData'>
-                    <div style='background-color: black' class='image'></div>
-                    <div style='background-color: black' class='image'></div>
+                    <div style='background-color: black' class='image'/>
+                    <div style='background-color: black' class='image'/>
                 </figure>
                 <div class='infoboxData'>
                     <h4>Music</h4>
@@ -152,8 +149,8 @@
             <!-- Languages -->
             <div class='infobox'>
                 <figure class='infoboxData'>
-                    <div style='background-color: black' class='image'></div>
-                    <div style='background-color: black' class='image'></div>
+                    <div style='background-color: black' class='image'/>
+                    <div style='background-color: black' class='image'/>
                 </figure>
                 <div class='infoboxData'>
                     <h4>Languages</h4>
@@ -196,8 +193,8 @@
             <!-- Programming -->
             <div class='infobox reverse'>
                 <figure class='infoboxData'>
-                    <div style='background-color: black' class='image'></div>
-                    <div style='background-color: black' class='image'></div>
+                    <div style='background-color: black' class='image'/>
+                    <div style='background-color: black' class='image'/>
                 </figure>
                 <div class='infoboxData'>
                     <h4>Programming</h4>
@@ -252,11 +249,11 @@
                                 <!-- Instagram -->
                                 <a href='https://www.instagram.com/vlajd_/' target='_blank'><div class='contactMediaIcon'><svg width="61.46" height="61.46" viewBox="0 0 61.46 61.46"><g transform="translate(-4.5 -4.5)"><path d="M48.034,9.622a12.842,12.842,0,0,1,12.8,12.8V48.034a12.842,12.842,0,0,1-12.8,12.8H22.426a12.842,12.842,0,0,1-12.8-12.8V22.426a12.842,12.842,0,0,1,12.8-12.8H48.034m0-5.122H22.426A17.979,17.979,0,0,0,4.5,22.426V48.034A17.979,17.979,0,0,0,22.426,65.96H48.034A17.979,17.979,0,0,0,65.96,48.034V22.426A17.979,17.979,0,0,0,48.034,4.5Z"/><path d="M27.466,16.682a3.841,3.841,0,1,1,3.841-3.841A3.832,3.832,0,0,1,27.466,16.682Z" transform="translate(24.409 5.743)"/><path d="M26.615,16.372A10.243,10.243,0,1,1,16.372,26.615,10.253,10.253,0,0,1,26.615,16.372m0-5.122A15.365,15.365,0,1,0,41.98,26.615,15.369,15.369,0,0,0,26.615,11.25Z" transform="translate(8.615 8.615)"/></g></svg></div></a>
                             </div>
-                            <div style='background-color: black' class='image'></div>
+                            <div style='background-color: black' class='image'/>
                         </div>
                     {/if}
                     {#if !matches}
-                        <div style='background-color: black' class='image'></div>
+                        <div style='background-color: black' class='image'/>
                         <figcaption><strong>Boris Krassimirov Kostadinov<br>Vienna, Austria</strong></figcaption>
                     {/if}    
                 </MediaQuery>

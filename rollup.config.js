@@ -38,6 +38,7 @@ export default {
         inlineDynamicImports : true
 	},
 	plugins: [
+        css({ output: 'bigger-picture.css' }),
 		svelte({
 			compilerOptions: {
 				// enable run-time checks when not in production
