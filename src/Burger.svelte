@@ -102,11 +102,7 @@
         background-color: var(--clr1);
         transition: width var(--anim0) ease;
     }
-
-    a:hover::before {
-        width: 100%;
-    }
-    
+   
     #OpenBurger {
         /* Transform */
         padding: 1em 7.5em;
@@ -144,10 +140,16 @@
         transition: stroke-width var(--anim0) ease;
     }
     
-    #ClosedBurger:hover {
-        stroke-width: 5;
-    }
+    @media (hover: hover) {
+        a:hover::before {
+            width: 100%;
+        }
 
+        #ClosedBurger:hover {
+            stroke-width: 5;
+        }
+    }
+ 
     @media only screen and (max-width: 1280px) and (max-height: 2560px) {
         #OpenBurger {
             transform: translateY(-20em);

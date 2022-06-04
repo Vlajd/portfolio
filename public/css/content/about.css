@@ -37,6 +37,13 @@
     /* Font */
     color: var(--clr4);
     text-decoration: underline;
+    text-decoration-thickness: 1.5px;
+    
+    transition: text-decoration-color var(--anim0) linear;
+}
+
+#About .infobox a:hover {
+    text-decoration-color: transparent;
 }
 
 #About .infobox .infoboxData {

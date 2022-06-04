@@ -30,8 +30,3 @@
     box-sizing: border-box;
     text-decoration: none;
 }
-
-html {
-    /* Smooth Site Scrolling */
-    scroll-behavior: smooth;
-}

@@ -26,14 +26,14 @@
     }
     function set_project_lightbox() {
         projects_figures = document.querySelectorAll('.projects_figure');
-        console.log(projects_figures);
         for (let i = 0; i < projects_figures.length; i++) {
             projects_figures.item(i).addEventListener('click', open_gallery);
         }
     }
     window.addEventListener('load', set_project_lightbox);
-
-
+    window.addEventListener('resize', () => {
+        setTimeout(set_project_lightbox, 500);
+    });
 
     let Module = undefined;
     onMount( async () => Module = (await import('./english/English.svelte')).default );
@@ -64,21 +64,19 @@ DO NOT, AT ANY COST, TOUCH!!!
         selectLang(0);
         let fn = async () => Module = (await import('./english/English.svelte')).default;
         fn();
-        set_project_lightbox();
+        setTimeout(set_project_lightbox, 500);
     }}>English</button>
     <hr>
     <button class='langSelect' on:click={ () => {
         selectLang(1);
         let fn = async () => Module = (await import('./german/German.svelte')).default;
         fn();
-        set_project_lightbox();
     }}>Deutsch</button>
     <hr>
     <button class='langSelect' on:click={ () => {
         selectLang(2);
         let fn = async () => Module = (await import('./bulgarian/Bulgarian.svelte')).default;
         fn();
-        set_project_lightbox();
     }}>Български</button>
 </div>
 

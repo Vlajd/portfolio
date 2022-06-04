@@ -21,7 +21,7 @@
 </script>
 
 <div class="slider rel">
-    <Figure image={images[activeImage]}/>
+    <Figure image={images[activeImage]} section_tag='projects_figure'/>
 	<button class="arrow arrowLeft" on:click={() => changeImg(1)}>&lsaquo;</button>
 	<button class="arrow arrowRight" on:click={() => changeImg(2)}>&rsaquo;</button>
 </div>

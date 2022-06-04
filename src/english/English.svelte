@@ -3,6 +3,7 @@
     import MediaQuery from '../MediaQuery.svelte';
     import Slider from '../Slider.svelte';
     import Figure from '../Figure.svelte';
+    import Parallax from '../Parallax.svelte';
 
     export let project_image_source_name;
 
@@ -12,45 +13,54 @@
             image_prev: './img/projects/preview/' + project_image_source_name[0],
             caption: 'Train In Rumania',
             alt: 'A Train driving through the nature of Rumania.',
+            type: 'Photography'
         },
         {
             image: './img/projects/full/' + project_image_source_name[1],
             image_prev: './img/projects/preview/' + project_image_source_name[1],
             caption: 'Kissing Pigeons',
             alt: 'Two Pigeons enjoying their time together on a roof.',
+            type: 'Photography'
         },
         {
             image: './img/projects/full/' + project_image_source_name[2],
             image_prev: './img/projects/preview/' + project_image_source_name[2],
             caption: 'Bell and Cheese',
             alt: 'Glass bell with cheddar in the background.',
+            type: 'Photography'
         },
         {
             image: './img/projects/full/' + project_image_source_name[3],
             image_prev: './img/projects/preview/' + project_image_source_name[3],
             caption: 'Point Chaplin N°1',
             alt: 'Chaplin Illustration.',
+            type: 'Illustration'
         },
         {
             image: './img/projects/full/' + project_image_source_name[4],
             image_prev: './img/projects/preview/' + project_image_source_name[4],
             caption: 'Point Chaplin N°2',
             alt: 'Chaplin Illustration.',
+            type: 'Illustration'
         },
         {
             image: './img/projects/full/' + project_image_source_name[5],
             image_prev: './img/projects/preview/' + project_image_source_name[5],
             caption: 'Burning Castle',
             alt: 'Photoshop of imaginary burning Castle.',
+            type: 'Collage'
         }
     ];
+    let parallax_val = 0;
 </script>
 
 <Burger text={['Start', 'Projects', 'About', 'Contact']}/>
+<svelte:window bind:scrollY={parallax_val}/>
 
 <div>
 <!-- Start -->
 <section id='Start'>
+    <Parallax opacity={20} rad={150} val={parallax_val} speed={0.25} vwpos={100} offset={{x: 150, y: -145}}/>
     <div>
         <h1>Boris Kostadinov</h1>
         <h5>Multimedia</h5>
@@ -60,6 +70,7 @@
 <main id='Content'>
     <!-- Projects -->
     <section id='Projects'>
+        <Parallax opacity={30} rad={300} val={parallax_val} speed={0.075} offset={{x: 100, y: -300}}/>
         <h1>Projects</h1>
         <MediaQuery query = '(min-width: 1280px)' let:matches>
             {#if matches}
@@ -71,14 +82,16 @@
             {/if}
             {#if !matches}
                 <div id='Gallery'>
-                    <Slider images={project_images}></Slider>
+                    <Slider images={project_images}/>
                 </div>
             {/if}
         </MediaQuery>
     </section>
+    <Parallax opacity={20} rad={250} val={parallax_val} speed={0.175} vwpos={100} offset={{x: 50, y: 1000}}/>
     
     <!-- About -->
     <section id='About'>
+        <Parallax opacity={30} rad={300} val={parallax_val} speed={0.075} offset={{x: 100, y: -150}}/>
         <h1>About</h1>
         <!-- Introduction -->
         <div class='infobox'>
