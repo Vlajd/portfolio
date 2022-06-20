@@ -8,13 +8,13 @@
 </script>
 
 <svg
-    style:transform='translate(calc({rad * -2 + offset.x}px + {vwpos}vw), {-val * speed + offset.y}px)'
-    height='{rad * 2}'
-    width='{rad * 2}'>
+    style:transform='translate(calc({-rad + offset.x}em + {vwpos}vw), calc({-val * speed}px + {offset.y}em))'
+    height='{rad * 2}em'
+    width='{rad * 2}em'>
     <circle
-        cx='{rad}'
-        cy='{rad}'
-        r='{rad}'
+        cx='{rad}em'
+        cy='{rad}em'
+        r='{rad}em'
         fill='var(--clr1)'
         fill-opacity='{opacity}%'
         />
@@ -24,5 +24,11 @@
     svg {
         position: absolute;
         z-index: -1;
+    }
+    
+    @media only screen and (max-width: 1280px) and (max-height: 2560px) {
+        svg {
+            visibility: hidden;
+        }
     }
 </style>

@@ -1,0 +1,26 @@
+{
+    "projects":{
+        "full":"./img/projects/full/",
+        "prev":"./img/projects/preview/",
+        "name":[
+            "TrainInRumania.jpg",
+            "KissingPigeons.jpg",
+            "GlasAndCheese.jpg",
+            "Punktechaplin0.jpg",
+            "Punktechaplin1.jpg",
+            "BurningCastle.jpg"
+        ]
+    },
+    "about":{
+        "full":"./img/about/full/",
+        "prev":"./img/about/preview/",
+        "name":[
+            "FamilienFoto.jpg",
+            "DonauDropNoseGrab.jpg","DonauHumongusOllie.jpg",
+            "","",
+            "","",
+            "",""
+
+        ]
+    }
+}

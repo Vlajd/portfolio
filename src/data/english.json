@@ -1,0 +1,138 @@
+{
+    "images": {
+        "projects":[
+            {
+                "caption":"Train In Rumania",
+                "alt":"A Train driving through the nature of Rumania.",
+                "type":"Photography"
+            },
+            {
+                "caption":"Kissing Pigeons",
+                "alt":"Two Pigeons enjoying their time together on a roof.",
+                "type":"Photography"
+            },
+            {
+                "caption":"Bell and Cheese",
+                "alt":"Glass bell with cheddar in the background.",
+                "type":"Photography"
+            },
+            {
+                "caption":"Point Chaplin N°1",
+                "alt":"Chaplin Illustration.",
+                "type":"Illustration"
+            },
+            {
+                "caption":"Point Chaplin N°2",
+                "alt":"Chaplin Illustration.",
+                "type":"Illustration"
+            },
+            {
+                "caption":"Burning Castle",
+                "alt":"Photoshop of imaginary burning Castle.",
+                "type":"Collage"
+            }
+        ],
+        "about":[
+            {
+                "caption":"Family Jam Session",
+                "alt":"",
+                "type":""
+            },
+            {
+                "caption":"",
+                "alt":"",
+                "type":""
+            },
+            {
+                "caption":"",
+                "alt":"",
+                "type":""
+            },
+            {
+                "caption":"",
+                "alt":"",
+                "type":""
+            },
+            {
+                "caption":"",
+                "alt":"",
+                "type":""
+            },
+            {
+                "caption":"",
+                "alt":"",
+                "type":""
+            },
+            {
+                "caption":"",
+                "alt":"",
+                "type":""
+            },
+            {
+                "caption":"",
+                "alt":"",
+                "type":""
+            },
+            {
+                "caption":"",
+                "alt":"",
+                "type":""
+            }
+        ]
+    },
+    "burger":[
+        "Start",
+        "Projects",
+        "About",
+        "Contact"
+    ],
+    "Start":{
+        "title":{
+            "name":"Boris Kostadinov",
+            "sub":"Multimedia"
+        }
+    },
+    "About":"<strong>Hi</strong>, my name is <strong>Boris</strong>, and I am currently a student at <strong>die Graphische</strong> in Vienna.<br><br>My area of interest is very wide. From <strong>music-arrangements</strong>, to <strong>photography</strong>, <strong>vector- and 3D-art</strong>, to programming powerful applications in <strong>Rust</strong> and/or <strong>C++</strong>. As said, my area of interest is very wide.<br><br>As for my skills, you should check out <a href='#Projects'><strong>my projects</strong></a> to make a unique image for yourself. Just telling you what I'm able to do will <strong>not</strong> justify my actual skills to a <strong>desired extend</strong>.<br><br>If you're interested in finding out more about me, you can take a look at my <strong>CV</strong> or <a href='#Contact'><strong>contact me</strong></a>.",
+    "Hobbies":{
+        "title":"Hobbies",
+        "intro":"Hobbies are something that can <strong>shape someone’s life</strong> very drastically. As for me, I've mixed my something into one big dish that I try to keep in balance. It has been fun so far...",
+        "elements":[
+            {
+                "title":"Skateboarding",
+                "text":"I've been skateboarding since ~2018. It's very frustrating and expensive, but fortunately, it's also very rewarding.<br><br>Skateboarding is not a sport in the traditional sense. It allows for <strong>creativity</strong>, because no one's telling you what to do or how you should do it. For me, it pushed my own creativity to <strong>another level</strong>."
+            },
+            {
+                "title":"Music",
+                "text":"Music's also one of my favourite things to do. I've been obsessed with it since I was <strong>7 years old!</strong><br><br>I'm mostly playing piano and percussion. From Frederic Chopin to modern Jazz, I enjoy pretty much any genre.<br><br>I am also writing sheet-music for (mostly) piano. If you're intereted, check out my website:<br><br><a><strong>vlajdsheetmusic.com</strong></a>"
+            },
+            {
+                "title":"Languages",
+                "text":"There are tons of languages out there in the wild, and millions of dialects to those as well. Because I grew up in Luxembourg, I got to get a taste of a pack of languages at a very young age.<br><br>The languages I currently speak are:",
+                "langname":[
+                    "Bulgarian",
+                    "German",
+                    "English",
+                    "Luxembourgish",
+                    "Japanese",
+                    "French"
+                ],
+                "langlevel":[
+                    "Native",
+                    "Fluent",
+                    "Moderate",
+                    "Beginner"
+                ]
+            },
+            {
+                "title":"Programming",
+                "text":"As you’ve already read in my basic introduction, I have not too little knowledge in the art of programming. I've started my programming-journey back in 2014, and I'm looking forward to my future projects every single day!<br><br>If you're interested to see the source code of some of my projects, check out my GitHub account: <a href='https://github.com/Vlajd' target='_blank'><strong>github.com/Vlajd</strong></a><br><br>Also, check out the open-source game engine I'm developing in Rust: <a href='https://github.com/slackers123/engine' target='_blank'><strong>github.com/slackers123/engine</strong></a>"
+            }
+        ]      
+    },
+    "Contact":{
+        "title":"Contact",
+        "intro":"I am always open to inquiries or questions, so do not hesitate to contact me!",
+        "name":"<strong>Boris Krassimirov Kostadinov<br>Vienna, Austria</strong>"        
+    },
+    "name":"ⒸBoris Kostadinov 2022"
+}

@@ -1,0 +1,138 @@
+{
+    "images": {
+        "projects":[
+            {
+                "caption":"Zug in Rumänien",
+                "alt":"Ein Zug nach Österreich in Rumänien",
+                "type":"Fotographie"
+            },
+            {
+                "caption":"Küssende Tauben",
+                "alt":"Zwei Tauben genießen ihre Zeit zusammen auf einem Dach.",
+                "type":"Fotographie"
+            },
+            {
+                "caption":"Glock und Kaas",
+                "alt":"Glas mit Käse im Hintergrund.",
+                "type":"Fotographie"
+            },
+            {
+                "caption":"Punktechaplin N°1",
+                "alt":"Chaplin Illustration.",
+                "type":"Illustration"
+            },
+            {
+                "caption":"Punktechaplin N°2",
+                "alt":"Chaplin Illustration.",
+                "type":"Illustration"
+            },
+            {
+                "caption":"Brennende Burg",
+                "alt":"Photoshop von einer brennenden Burg.",
+                "type":"Kollage"
+            }
+        ],
+        "about":[
+            {
+                "caption":"Familienjamsession",
+                "alt":"",
+                "type":""
+            },
+            {
+                "caption":"",
+                "alt":"",
+                "type":""
+            },
+            {
+                "caption":"",
+                "alt":"",
+                "type":""
+            },
+            {
+                "caption":"",
+                "alt":"",
+                "type":""
+            },
+            {
+                "caption":"",
+                "alt":"",
+                "type":""
+            },
+            {
+                "caption":"",
+                "alt":"",
+                "type":""
+            },
+            {
+                "caption":"",
+                "alt":"",
+                "type":""
+            },
+            {
+                "caption":"",
+                "alt":"",
+                "type":""
+            },
+            {
+                "caption":"",
+                "alt":"",
+                "type":""
+            }
+        ]
+    },
+    "burger":[
+        "Start",
+        "Projekte",
+        "Über",
+        "Kontakt"
+    ],
+    "Start":{
+        "title":{
+            "name":"Boris Kostadinov",
+            "sub":"Multimedia"
+        }
+    },
+    "About":"<strong>Hallo</strong>, mein Name ist <strong>Boris</strong> und bin Schüler and der <strong>Graphischen</strong> in Wien.<br><br>Mein Interessensgebiet ist sehr breit. Von <strong>Music-Notationen</strong>, zu <strong>Fotographie</strong>, <strong>Vektor- and 3D-Kunst</strong>, bis hin zum Programmieren von leistungsstarken Programmen in <strong>Rust</strong> und/oder <strong>C++</strong>. Wie gesagt, mein Interessensgebiet ist sehr breit.<br><br>Was meine Fähigkeiten betrifft solltest du dir <a href='#Projects'><strong>meine Projekte</strong></a> anschauen und dir dein eigenes Bild von mir machen. Nur zu erzählen was ich so alles kann wird <strong>nicht</strong> meine Fähigkeiten <strong>gerechtfertigten</strong>.<br><br>Solltest du Interesse haben mehr über mich zu erfahren solltest du dir mein <strong>CV</strong> anschauen oder <a href='#Contact'><strong>kontaktieren</strong></a>.",
+    "Hobbies":{
+        "title":"Hobbies",
+        "intro":"Hobbies <strong>verändern einem sein Leben</strong>. Ich führe momentan viele davon, und versuche alle in Balance zu halten. Soweit bereitet es mir recht viel Freude...",
+        "elements":[
+            {
+                "title":"Trickrollbrettfahren",
+                "text":"Ich fahre Trickrollbrett seit ~2018. Es ist sehr frustrierend und viel zu teuer, aber zum Glück ist es ab und zu auch sehr erleichternd.<br><br>Skateboarden ist kein traditioneller Sport. Es erlaubt dir <strong>kreativ</strong>kreativ zu sein, niemand zwingt dir was du machen musst. Persönlich brachte dies meine eigene Kreativität zu einem <strong>anderem Niveau</strong>."
+            },
+            {
+                "title":"Musik",
+                "text":"Musik ist auch eines der Dinge, die ich am liebsten tue. Ich bin damit schon seit dem Alter von <strong>7 Jahren</strong>besessen.<br><br>Vor allem spiele ich Klavier und Perkussion. Von Frederic Chopin bis hin zu modernem Jazz, ich genieße im Grunde jedes Genre.<br><br>Ich arrangiere ebenfalls Noten für (größtenteils) Klavier. Bei Interesse, besuche:<br><br><a><strong>vlajdsheetmusic.com</strong></a>"
+            },
+            {
+                "title":"Sprachen",
+                "text":"Es gibt tonnenweise Sprachen auf der Welt, und Millionen von Dialegten zu diesen auch noch. Da ich in Luxemburg aufgewachsen bin, konnte ich bereits viele Sprachen anschnuppern.<br><br>Die Sprachen, die ich momentan spreche, sind:",
+                "langname":[
+                    "Bulgarisch",
+                    "Deutsch",
+                    "Englisch",
+                    "Luxemburgisch",
+                    "Japanisch",
+                    "Franzäsisch"
+                ],
+                "langlevel":[
+                    "Nativ",
+                    "Fließend",
+                    "Moderat",
+                    "Anfänger"
+                ]
+            },
+            {
+                "title":"Programmieren",
+                "text":"Wie man bereits in meiner Einleitung lesen konnte, habe ich nicht wenig Erfahrung in der Kunst des Programmierens. Meine Programmierreise startete ich im Jahr 2014, und seither schaue ich jeden Tag zu meinen zukünftigen Projekten!<br><br>Solltest du interessiert sein, dir den Sourcecode von einigen meiner Arbeiten anzuschauen, schaue bei meinem GitHub-profil vorbei: <a href='https://github.com/Vlajd' target='_blank'><strong>github.com/Vlajd</strong></a><br><br>Schaue dir auch die open-source Spieleengine an, die ich in Rust entwickle: <a href='https://github.com/slackers123/engine' target='_blank'><strong>github.com/slackers123/engine</strong></a>"
+            }
+        ]      
+    },
+    "Contact":{
+        "title":"Kontakt",
+        "intro":"Ich bin immer offen zu Vorschlägen und Fragen, also zögere nicht mich zu kontaktieren!",
+        "name":"<strong>Boris Krassimirov Kostadinov<br>Wien, Österreich</strong>"        
+    },
+    "name":"ⒸBoris Kostadinov 2022"
+}

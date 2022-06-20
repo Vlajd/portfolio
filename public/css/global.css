@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Frank+Ruhl+Libre:wght@400;500;700&display=swap');
 @import url('./root.css');
-@import url('./lang.css');
-@import url('./content/content.css');
 
 /* ## Text */
 h1 {
@@ -85,6 +83,8 @@ table {
     border-style: solid;
     border-width: 3px;
     border-radius: 20px;
+    
+    background-color: rgba(232, 232, 219, 0.65);
 }
 
 th {
@@ -119,6 +119,7 @@ tr:last-child th {
 html {
     /* Smooth Site Scrolling */
     scroll-behavior: smooth;
+    overflow-x: hidden;
     
     scrollbar-color: rgba(73, 72, 70, 0.125) rgba(73, 72, 70, 0.1);
     scrollbar-width: thin;
@@ -196,13 +197,6 @@ footer {
     
     /* Border */
     border-radius: 30px;
-}
-
-figure {
-    border-style: solid;
-    border-width: 1em;
-    border-radius: 15px;
-    border-color: rgba(232, 232, 219, 0.75);
 }
 
 /* ## Mobile */
