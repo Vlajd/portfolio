@@ -22,7 +22,7 @@
         class='image'/>
     <span>{image.type}</span>
     <figcaption>{image.caption}</figcaption>
-</figure>    
+</figure>
 
 <style>
     figure {

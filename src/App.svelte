@@ -6,16 +6,55 @@
     import german from './data/german.json';
     import bulgarian from './data/bulgarian.json';
     import { onMount } from 'svelte';
+    import source from './data/source.json';
 
-    const bind_json_querries = () => {
-        document.getElementById('AboutInnerHtmlQuerry').innerHTML = lang.About;
-        document.getElementById('HobbiesInnerHtmlQuerry').innerHTML = lang.Hobbies.intro;
-        let hobbies = document.getElementsByClassName('hobbiesElementsInnerHtmlQuerry');
-        for (let i = 0; i < hobbies.length; i++) {
-            hobbies[i].innerHTML = lang.Hobbies.elements[i].text;
+    let lang = english;
+    let project_images = undefined;
+    let about_images = undefined;
+    let contact_images = undefined;
+
+    let cookies = document.cookie
+        .split(';')
+        .map(cookie => cookie.split('='))
+        .reduce((accumulator, [key, value]) =>
+            ({ ...accumulator, [key.trim()]: decodeURIComponent(value) }),
+        {}
+    );
+    let cookie_date = new Date;
+    cookie_date.setFullYear(cookie_date.getFullYear() + 1);
+
+    const bind_image_querries = () => {
+        
+        project_images = new Array();
+        about_images = new Array();
+        contact_images = new Array();
+
+        // Images
+        for (let i = 0; i < source.projects.name.length; i++) {
+            project_images.push({
+                image: source.projects.full + source.projects.name[i],
+                image_prev: source.projects.prev + source.projects.name[i],
+                caption: lang.images.projects[i].caption,
+                alt: lang.images.projects[i].alt,
+                type: lang.images.projects[i].type
+            });
         }
-        document.getElementById('ContactFigureInnerHtmlQuerry').innerHTML = lang.Contact.name;
-    };
+        for (let i = 0; i < source.about.name.length; i++) {
+            about_images.push({
+                image: source.about.full + source.about.name[i],
+                image_prev: source.about.prev + source.about.name[i],
+                caption: lang.images.about[i].caption,
+                alt: lang.images.about[i].alt,
+                type: lang.images.about[i].type
+            });
+        }
+        for (let i = 0; i < source.contact.name.length; i++) {
+            contact_images.push({
+                image: source.contact.full + source.contact.name[i],
+                image_prev: source.contact.prev + source.contact.name[i]
+            });
+        }
+    }
 
     let bp = BiggerPicture({
 	    target: document.body,
@@ -41,9 +80,24 @@
 
     // █░░ ▄▀█ █▄░█ █▀▀ █░█ ▄▀█ █▀▀ █▀▀   █▀ █▀▀ █░░ █▀▀ █▀▀ ▀█▀ █▀█ █▀█
     // █▄▄ █▀█ █░▀█ █▄█ █▄█ █▀█ █▄█ ██▄   ▄█ ██▄ █▄▄ ██▄ █▄▄ ░█░ █▄█ █▀▄
-    // Visually changes the selected language 
-    let lang = english;
-    function selectLang(index) {
+    // Visually changes the selected language     
+    const selectLang = async (index) => {
+        switch (index) {
+            case 0:
+                lang = english;
+                break;
+            case 1:
+                lang = german; 
+                break;
+            case 2:
+                lang = bulgarian;
+                break;
+            case 3:
+                lang = bulgarian;
+                break;
+        }
+        document.cookie = 'lang=' + index + ';AC-C=ac-c;expires=' + cookie_date.toUTCString() + ';path=/;SameSite=Strict';
+
         let elements = document.getElementsByClassName('langSelect');
         for (let i = 0; i < elements.length; i++) {
             if (i == index) {
@@ -53,9 +107,20 @@
                 elements[i].classList.remove('underlined');
             }
         }
-        setTimeout(bind_json_querries);
+        setTimeout(bind_image_querries, 100);
     }
-    onMount(bind_json_querries);
+        
+    bind_image_querries();
+    
+    onMount( () => {
+        if (cookies.lang != undefined) {
+            console.log("Test");
+            selectLang(parseInt(cookies.lang));
+        }
+        else {
+            selectLang(0);
+        }
+    });
 </script>
 
 <!--
@@ -67,27 +132,23 @@ DO NOT, AT ANY COST, TOUCH!!!
 <div id='Lang'>
     <button class='langSelect underlined' on:click={ () => {
         selectLang(0);
-        lang = english;
     }}>English</button>
     <hr>
     <button class='langSelect' on:click={ () => {
         selectLang(1);
-        lang = german; 
     }}>Deutsch</button>
     <hr>
     <button class='langSelect' on:click={ () => {
         selectLang(2);
-        lang = bulgarian;
     }}>Български</button>
     <hr>
     <button class='langSelect' on:click={ () => {
         selectLang(3);
-        lang = bulgarian;
     }}>日本語</button>
 </div>
 
 <!-- Current Language Module -->
-<svelte:component this={Site} lang={lang}/>
+<svelte:component this={Site} lang={lang} project_images={project_images} about_images={about_images} contact_images={contact_images}/>
 
 <style>
     /* ## Language Selector */

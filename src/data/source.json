@@ -22,5 +22,12 @@
             "",""
 
         ]
+    },
+    "contact":{
+        "full":"./img/contact/full/",
+        "prev":"./img/contact/preview/",
+        "name":[
+            "BorisKrassimirovKostadinov.jpg"
+        ]
     }
 }

@@ -1,8 +1,14 @@
 <script>
     import Figure from './Figure.svelte';
+    
+    export let media = false;
+    export let type = undefined;
+	export let images = undefined;
+	
+    let is_figure = type == Figure;
+    let elements;
 
-	export let images;
-	$: activeImage = 0;
+    $: activeImage = 0;
 	function changeImg(e) {
 		let i = images.length;
 		if (e == 1) {
@@ -20,11 +26,18 @@
 	}
 </script>
 
-<div class="slider rel">
-    <Figure image={images[activeImage]} section_tag='projects_figure'/>
-	<button class="arrow arrowLeft" on:click={() => changeImg(1)}>&lsaquo;</button>
-	<button class="arrow arrowRight" on:click={() => changeImg(2)}>&rsaquo;</button>
-</div>
+{#if media}
+    <div class="slider rel">
+        {#if is_figure}
+            <svelte:component this={type} image={images[activeImage]} section_tag='projects_figure'/>
+        {/if}
+    	<button class="arrow arrowLeft" on:click={() => changeImg(1)}>&lsaquo;</button>
+    	<button class="arrow arrowRight" on:click={() => changeImg(2)}>&rsaquo;</button>
+    </div>
+{/if}
+{#if !media}
+    <span bind:this={elements}><slot/></span>
+{/if}
 
 <style>
 	.arrow {
