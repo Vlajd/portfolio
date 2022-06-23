@@ -180,6 +180,10 @@ footer {
     border-top-right-radius: 32.5px;
 }
 
+.invisible {
+	display: none;
+}
+
 .image {
     /* Display */
     flex-grow: 1;
@@ -248,3 +252,109 @@ footer {
         overflow-x: hidden;
     }
 }
+
+
+
+/* ## About */
+#About {
+    /* Display */
+    display: flex;
+    flex-direction: column;
+    gap: 15em;
+
+    /* Transform */
+    width: 100%;
+    min-height: 100vh;
+}
+
+#About p {
+    max-width: 68ch;
+}
+
+#About .infobox {
+    /* Display */
+    display: flex;
+    justify-content: space-around;
+    gap: 5em;
+    min-height: 50vh;
+}
+
+#About .infobox figure {
+    /* Display*/
+    display: flex;
+    justify-content: space-between;
+    gap: 2.5em; 
+    flex-wrap: nowrap;
+
+    /* Transform */
+    min-width: 640px;
+}
+
+#About .infobox a {
+    /* Font */
+    color: var(--clr4);
+    text-decoration: underline;
+    text-decoration-thickness: 1.5px;
+    cursor: pointer;
+
+    transition: text-decoration-color var(--anim0) linear;
+}
+
+#About .infobox a:hover {
+    text-decoration-color: transparent;
+}
+
+#About .infobox .infoboxData {
+    /* Transform */
+    width: 50%;
+    height: auto;
+    margin-bottom: 5em;
+}
+
+#Hobbies {
+    /* Display*/
+    display: flex;
+    flex-direction: column;
+    gap: 10em;
+}
+
+.reverse {
+    /* Display */
+    flex-direction: row-reverse;
+}
+
+
+@media only screen and (max-width: 1280px) and (max-height: 2560px) {
+	#About {
+		/* Display */
+		gap: 5em;
+	}
+
+	#About .infobox {
+		/* Display */
+		flex-direction: column;
+	}
+	
+	#Hobbies .infobox {
+		/* Display */
+		flex-direction: column-reverse;
+	}
+
+	#About .infobox .infoboxData {
+		/* Transform */
+		min-width: 100%;
+		margin-bottom: 0;
+		flex-direction: column;
+	}
+
+	#About .infobox .infoboxData .image {
+		/* Transform */
+		min-height: 540px;
+	}
+	
+	.reverse {
+		/* Display */
+		flex-direction: row;
+	}
+}
+

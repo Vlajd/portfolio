@@ -114,7 +114,6 @@
     
     onMount( () => {
         if (cookies.lang != undefined) {
-            console.log("Test");
             selectLang(parseInt(cookies.lang));
         }
         else {

@@ -92,7 +92,7 @@
             "sub":"Multimedia"
         }
     },
-    "About":"<strong>Hallo</strong>, mein Name ist <strong>Boris</strong> und bin Schüler and der <strong>Graphischen</strong> in Wien.<br><br>Mein Interessensgebiet ist sehr breit. Von <strong>Music-Notationen</strong>, zu <strong>Fotographie</strong>, <strong>Vektor- and 3D-Kunst</strong>, bis hin zum Programmieren von leistungsstarken Programmen in <strong>Rust</strong> und/oder <strong>C++</strong>. Wie gesagt, mein Interessensgebiet ist sehr breit.<br><br>Was meine Fähigkeiten betrifft solltest du dir <a href='#Projects'><strong>meine Projekte</strong></a> anschauen und dir dein eigenes Bild von mir machen. Nur zu erzählen was ich so alles kann wird <strong>nicht</strong> meine Fähigkeiten <strong>gerechtfertigten</strong>.<br><br>Solltest du Interesse haben mehr über mich zu erfahren solltest du dir mein <strong>CV</strong> anschauen oder <a href='#Contact'><strong>kontaktieren</strong></a>.",
+    "About":"<strong>Hallo</strong>, mein Name ist <strong>Boris</strong> und bin Schüler and der <strong>Graphischen</strong> in Wien.<br><br>Mein Interessensgebiet ist sehr breit. Von <strong>Music-Notationen</strong>, zu <strong>Fotographie</strong>, <strong>Vektor- and 3D-Kunst</strong>, bis hin zum Programmieren von leistungsstarken Programmen in <strong>Rust</strong> und/oder <strong>C++</strong>. Wie gesagt, mein Interessensgebiet ist sehr breit.<br><br>Was meine Fähigkeiten betrifft solltest du dir <a href='#Projects'><strong>meine Projekte</strong></a> anschauen und dir dein eigenes Bild von mir machen. Nur zu erzählen was ich so alles kann wird <strong>nicht</strong> meine Fähigkeiten <strong>gerechtfertigten</strong>.",
     "Hobbies":{
         "title":"Hobbies",
         "intro":"Hobbies <strong>verändern einem sein Leben</strong>. Ich führe momentan viele davon, und versuche alle in Balance zu halten. Soweit bereitet es mir recht viel Freude...",
@@ -103,7 +103,7 @@
             },
             {
                 "title":"Musik",
-                "text":"Musik ist auch eines der Dinge, die ich am liebsten tue. Ich bin damit schon seit dem Alter von <strong>7 Jahren</strong>besessen.<br><br>Vor allem spiele ich Klavier und Perkussion. Von Frederic Chopin bis hin zu modernem Jazz, ich genieße im Grunde jedes Genre.<br><br>Ich arrangiere ebenfalls Noten für (größtenteils) Klavier. Bei Interesse, besuche:<br><br>"
+                "text":"Musik ist auch eines der Dinge, die ich am liebsten tue. Ich bin damit schon seit dem Alter von <strong>7 Jahren</strong> besessen.<br><br>Vor allem spiele ich Klavier und Perkussion. Von Frederic Chopin bis hin zu modernem Jazz, ich genieße im Grunde jedes Genre.<br><br>Ich arrangiere ebenfalls Noten für (größtenteils) Klavier. Bei Interesse, besuche:<br><br>"
             },
             {
                 "title":"Sprachen",

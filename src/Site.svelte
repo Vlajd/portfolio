@@ -4,7 +4,14 @@
     import Slider from './Slider.svelte';
     import Figure from './Figure.svelte';
     import Parallax from './Parallax.svelte';
-    
+
+	import Skateboarding from './sections/Skateboarding.svelte';
+	import Music from './sections/Music.svelte';
+	import Languages from './sections/Languages.svelte';
+	import Programming from './sections/Programming.svelte';
+
+	let hobbies = [Skateboarding, Music, Languages, Programming];
+
     export let lang = undefined;
     export let project_images = undefined;
     export let about_images = undefined;
@@ -40,7 +47,7 @@
                     </div>
                     {/if}
                     <div id='Gallery'>
-                        <svelte:component this={Slider} type={Figure} media={!matches} images={project_images}/>
+                        <svelte:component this={Slider} media={!matches} items={project_images} type={Figure}/>
                     </div>
                 <Parallax val={parallax_val} speed={0.2} offset={{x: -10, y: 50}} opacity={25} rad={20} vwpos={100}/>
             </section>
@@ -67,94 +74,15 @@
                         <h2>{lang.Hobbies.title}</h2>
                         <br><br>
                         <p>{@html lang.Hobbies.intro}</p>
-                    </div>
-                    <Slider>
-                        <!-- Skateboarding -->
-                        <div class='infobox'>
-                            <figure class='infoboxData'>
-                                <div style='background-image: url("{about_images[1].image_prev}")' alt='{about_images[1].alt}' class='image'/>
-                                <div style='background-image: url("{about_images[2].image_prev}")' alt='{about_images[2].alt}' class='image'/>
-                            </figure>
-                            <div class='infoboxData'>
-                                <h4>{lang.Hobbies.elements[0].title}</h4>
-                                <br>
-                                <p>{@html lang.Hobbies.elements[0].text}</p>
-                            </div>
-                        </div>
-
-                        <!-- Music -->
-                        <div class='infobox reverse'>
-                            <figure class='infoboxData'>
-                                <iframe width='200%'
-                                        src='https://www.youtube-nocookie.com/embed/aT5iVxysewA?controls=0'
-                                        title='"Fight Of The Spirits", played by Boris Kostadinov'
-                                        frameborder='0'
-                                        allowfullscreen
-                                        style='border-radius:1em'/>
-                            </figure>
-                            <div class='infoboxData'>
-                                <h4>{lang.Hobbies.elements[1].title}</h4>
-                                <br>
-                                <p>{@html lang.Hobbies.elements[1].text}
-                                    <a href='../vlajdsheetmusic' target='_blank'><strong>vlajdsheetmusic.com</strong></a>
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- Languages -->
-                        <div class='infobox'>
-                            <figure class='infoboxData'>
-                                <div style='background-image: url("{about_images[5].image_prev}")' alt='{about_images[1].alt}' class='image'/>
-                                <div style='background-image: url("{about_images[6].image_prev}")' alt='{about_images[2].alt}' class='image'/>
-                            </figure>
-                            <div class='infoboxData'>
-                                <h4>{lang.Hobbies.elements[2].title}</h4>
-                                <br>
-                                <p>{@html lang.Hobbies.elements[2].text}</p>
-                                <br><br>
-                                <table>
-                                    <tr>
-                                        <th>Български ({lang.Hobbies.elements[2].langname[0]})</th>
-                                        <th>{lang.Hobbies.elements[2].langlevel[0]}</th>
-                                    </tr>
-                                    <tr>
-                                        <th>Deutsch ({lang.Hobbies.elements[2].langname[1]})</th>
-                                        <th>{lang.Hobbies.elements[2].langlevel[1]}</th>
-                                    </tr>
-                                    <tr>
-                                        <th>English ({lang.Hobbies.elements[2].langname[2]})</th>
-                                        <th>{lang.Hobbies.elements[2].langlevel[1]}</th>
-                                    </tr>
-                                    <tr>
-                                        <th>Letzeburgesch ({lang.Hobbies.elements[2].langname[3]})</th>
-                                        <th>{lang.Hobbies.elements[2].langlevel[2]}</th>
-                                    </tr>
-                                    <tr>
-                                        <th>日本語 ({lang.Hobbies.elements[2].langname[4]})</th>
-                                        <th>{lang.Hobbies.elements[2].langlevel[3]}</th>
-                                    </tr>
-                                    <tr>
-                                        <th>Français ({lang.Hobbies.elements[2].langname[5]})</th>
-                                        <th>{lang.Hobbies.elements[2].langlevel[3]}</th>
-                                    </tr>
-                                </table>
-                            </div>
-                        </div>
-                        <Parallax val={parallax_val} speed={0.2} offset={{x: -10, y: 45}} opacity={25} rad={20} vwpos={100}/>
-
-                        <!-- Programming -->
-                        <div class='infobox reverse'>
-                            <figure class='infoboxData'>
-                                <div style='background-image: url("{about_images[7].image_prev}")' alt='{about_images[1].alt}' class='image'/>
-                                <div style='background-image: url("{about_images[8].image_prev}")' alt='{about_images[2].alt}' class='image'/>
-                            </figure>
-                            <div class='infoboxData'>
-                                <h4>{lang.Hobbies.elements[3].title}</h4>
-                                <br>
-                                <p>{@html lang.Hobbies.elements[3].text}</p>
-                            </div>
-                        </div>
-                    </Slider>
+					</div>
+					{#if matches}
+						<Skateboarding lang={lang} about_images={about_images}/>
+						<Music lang={lang} about_images={about_images}/>
+						<Languages lang={lang} about_images={about_images}/>
+						<Parallax val={parallax_val} speed={0.2} offset={{x: -10, y: 45}} opacity={25} rad={20} vwpos={100}/>
+						<Programming lang={lang} about_images={about_images}/>
+					{/if}
+					<svelte:component this={Slider} media={!matches} items={hobbies} lang={lang} about_images={about_images}/>
                 </div>
             </section>
             
@@ -262,74 +190,6 @@
         justify-content: space-between;
         gap: 5em;
         row-gap: 7.5em;
-    }
-    
-    /* ## About */
-    #About {
-        /* Display */
-        display: flex;
-        flex-direction: column;
-        gap: 15em;
-
-        /* Transform */
-        width: 100%;
-        min-height: 100vh;
-    }
-
-    #About p {
-        max-width: 68ch;
-    }
-
-    #About .infobox {
-        /* Display */
-        display: flex;
-        justify-content: space-around;
-        gap: 5em;
-        min-height: 50vh;
-    }
-
-    #About .infobox figure {
-        /* Display*/
-        display: flex;
-        justify-content: space-between;
-        gap: 2.5em; 
-        flex-wrap: nowrap;
-
-        /* Transform */
-        min-width: 640px;
-    }
-
-    #About .infobox a {
-        /* Font */
-        color: var(--clr4);
-        text-decoration: underline;
-        text-decoration-thickness: 1.5px;
-        cursor: pointer;
-
-        transition: text-decoration-color var(--anim0) linear;
-    }
-
-    #About .infobox a:hover {
-        text-decoration-color: transparent;
-    }
-
-    #About .infobox .infoboxData {
-        /* Transform */
-        width: 50%;
-        height: auto;
-        margin-bottom: 5em;
-    }
-
-    #Hobbies {
-        /* Display*/
-        display: flex;
-        flex-direction: column;
-        gap: 10em;
-    }
-
-    .reverse {
-        /* Display */
-        flex-direction: row-reverse;
     }
     
     /* Contact */
@@ -473,37 +333,6 @@
         #Gallery {
             /* Display */
             display: block;
-        }
-
-        #About {
-            /* Display */
-            gap: 5em;
-        }
-
-        #About .infobox {
-            /* Display */
-            flex-direction: column;
-        }
-        
-        #Hobbies .infobox {
-            /* Display */
-            flex-direction: column-reverse;
-        }
-
-        #About .infobox .infoboxData {
-            /* Transform */
-            min-width: 100%;
-            min-height: 640px;
-        }
-
-        #About .infobox .infoboxData .image {
-            /* Transform */
-            min-height: 540px;
-        }
-        
-        .reverse {
-            /* Display */
-            flex-direction: row;
         }
         
         #Contact h2 {

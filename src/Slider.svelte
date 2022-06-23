@@ -1,57 +1,52 @@
 <script>
-    import Figure from './Figure.svelte';
-    
-    export let media = false;
-    export let type = undefined;
-	export let images = undefined;
-	
-    let is_figure = type == Figure;
-    let elements;
+	import Figure from './Figure.svelte';
 
-    $: activeImage = 0;
+	export let type = undefined;
+	export let media = true;
+	export let items;
+
+	export let lang = undefined;
+	export let about_images = undefined;
+
+	$: active_item = 0;
 	function changeImg(e) {
-		let i = images.length;
+		let i = items.length;
 		if (e == 1) {
-			if (activeImage == 0)
-                activeImage = i - 1;
-			else
-                activeImage -= 1;
-		}
-        else {
-			if (i == activeImage + 1)
-                activeImage = 0;
-			else
-                activeImage += 1;
+			if (active_item == 0) active_item = i - 1;
+			else active_item -= 1;
+		} else {
+			if (i == active_item + 1) active_item = 0;
+			else active_item += 1;
 		}
 	}
 </script>
 
 {#if media}
-    <div class="slider rel">
-        {#if is_figure}
-            <svelte:component this={type} image={images[activeImage]} section_tag='projects_figure'/>
-        {/if}
-    	<button class="arrow arrowLeft" on:click={() => changeImg(1)}>&lsaquo;</button>
-    	<button class="arrow arrowRight" on:click={() => changeImg(2)}>&rsaquo;</button>
-    </div>
-{/if}
-{#if !media}
-    <span bind:this={elements}><slot/></span>
+	<div class='slider rel'>
+		{#if type == Figure}
+			<svelte:component this={type} image={items[active_item]}/>
+			<button style='top:0;left:0' class='arrow arrowLeft' on:click={() => changeImg(1)}>&lsaquo;</button>
+			<button style='top:0;right:0' class='arrow arrowRight' on:click={() => changeImg(2)}>&rsaquo;</button>
+		{/if}
+		{#if type == undefined}
+			<svelte:component this={items[active_item]} lang={lang} about_images={about_images}/>
+			<button style='bottom:0;left:0'  class='arrow arrowLeft' on:click={() => changeImg(1)}>&lsaquo;</button>
+			<button style='bottom:0;right:0' class='arrow arrowRight' on:click={() => changeImg(2)}>&rsaquo;</button>
+		{/if}
+	</div>
 {/if}
 
 <style>
 	.arrow {
 		background-color: transparent;
-		color: rgba(255, 255, 255, 0.9);
+		color: rgba(250, 250, 250, 0.9);
 		position: absolute;
-		top: 0;
 		width: 70px;
 		height: 100%;
 		font-size: 7rem;
 		border: 0;
+		text-shadow: 0 0 6px black;
 	}
-	.arrowLeft { left: 0 }
-	.arrowRight { right: 0 }
 	button { cursor: pointer }
 	.rel {
 		position: relative
